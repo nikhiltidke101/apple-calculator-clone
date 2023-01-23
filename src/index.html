@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-blue-400">
+    <div id="calculator" class="bg-[#242430] opacity-75 inline-block absolute 
+    rounded-lg border border-black overflow-hidden text-white" draggable>
+        <div class="h-auto pl-2">
+          <button class="p-2 bg-red-700 rounded-full"></button>
+          <button class="p-2 bg-yellow-700 rounded-full"></button>
+          <button class="p-2 bg-green-700 rounded-full" id="greenBtn" ></button>
+        </div>
+        <div id="display" class="text-right text-6xl pr-2 pb-2">0</div>
+        <div class="flex gap-[4px]">
+          <div class="hidden flex-col gap-[3px]" id="advance-calc">
+            <div>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">(</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">)</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">mc</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">m+</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">m-</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">mr</button>
+            </div>
+            <div>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">2<sup class="text-md">nd</sup></button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">x<sup class="text-md">2</sup></button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">x<sup class="text-md">3</sup></button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">x<sup class="text-md">y</sup></button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">e<sup class="text-md">x</sup></button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">10<sup class="text-md">x</sup></button>
+            </div>
+            <div>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">1/x</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">&#8730x</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">4</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">4</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">ln</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">log<sub>10</sub></button>
+            </div>
+            <div>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">x!</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">sin</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">cos</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">tan</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">e</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">EE</button>
+            </div>
+            <div>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">Rad</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">sinh</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">cosh</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">tanh</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">&pi</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">Rand</button>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[3px]">
+            <div class="key row1 flex gap-[3px]">
+              <button class="operator h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">AC</button>
+              <button class="operator h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">+/-</button>
+              <button class="operator h-[50px] w-[60px] text-2xl bg-[#40404c] opacity-75">%</button>
+              <button class="operator h-[50px] w-[60px] text-2xl bg-[#ff9f1c]">/</button>
+            </div>
+  
+            <div class="key row2 flex gap-[3px]">
+              <button class="number h-[50px] w-[60px] text-2xl bg-[#696772] opacity-75">7</button>
+              <button class="number h-[50px] w-[60px] text-2xl bg-[#696772] opacity-75">8</button>
+              <button class="number h-[50px] w-[60px] text-2xl bg-[#696772] opacity-75">9</button>
+              <button class="operator h-[50px] text-2xl w-[60px] bg-[#ff9f1c]">*</button>
+            </div>
+  
+            <div class="key row3 flex gap-[3px]">
+              <button class="number h-[50px] w-[60px] text-2xl bg-[#696772] opacity-75">4</button>
+              <button class="number h-[50px] w-[60px] text-2xl bg-[#696772] opacity-75">5</button>
+              <button class="number h-[50px] w-[60px] text-2xl bg-[#696772] opacity-75">6</button>
+              <button class="operator h-[50px] text-2xl w-[60px] bg-[#ff9f1c]">-</button>
+            </div>
+  
+            <div class="key row4 flex gap-[3px]">
+              <button class="number operator h-[50px] text-2xl w-[60px] bg-[#696772] opacity-75">1</button>
+              <button class="number operator h-[50px] text-2xl w-[60px] bg-[#696772] opacity-75">2</button>
+              <button class="number operator h-[50px] text-2xl w-[60px] bg-[#696772] opacity-75">3</button>
+              <button class="operator h-[50px] text-2xl w-[60px] bg-[#ff9f1c]">+</button>
+            </div>
+            
+            <div class="key row5 flex gap-[3px]">
+              <button class="number flex-1 text-2xl bg-[#696772] opacity-75">0</button>
+              <button class="operator h-[50px] w-[60px] text-2xl bg-[#696772] opacity-75">.</button>
+              <button class="h-[50px] w-[60px] text-2xl bg-[#ff9f1c]" id="equalBtn">=</button>
+            </div>
+        </div>
+        </div>
+        
+    </div>
+</body>
+<script src="../dist/index.js"></script>
+</html>
